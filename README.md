@@ -9,12 +9,12 @@ In this notebook, you will build a deep neural network that functions as part of
 	```
 * Follow Step 12 on EC2 GPU instance. Ensure correct Python kernel version in Jupyter https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
 	```
-	git clone https://github.com/udacity/aind2-nlp-capstone
+	git clone https://github.com/ltfschoen/aind2-nlp-capstone
 	cd aind2-nlp-capstone
-	conda create --name aind-nlp-capstone python=3.5 numpy ipykernel
+	conda create --name aind-nlp-capstone python=3.5 numpy
+	source activate aind-nlp-capstone
 	conda install notebook ipykernel
 	ipython kernel install --user
-	source activate aind-nlp-capstone
 	pip install tensorflow-gpu -U
 	pip install keras -U
 	KERAS_BACKEND=tensorflow python -c "from keras import backend"
@@ -23,6 +23,8 @@ In this notebook, you will build a deep neural network that functions as part of
 	* Open in browser the URL shown in terminal and replace IP address
 	with that in the AWS EC2 Dashboard http://<EC2_IP_address>:8888/?token=3156e..
 	* Click machine_translation.ipynb
+	* Within Jupyter Notebook, running `!python --version` returns:
+		`Python 3.5.3 :: Continuum Analytics, Inc.`
 
 # Setup
 ## Install
