@@ -1,6 +1,29 @@
 # Introduction
 In this notebook, you will build a deep neural network that functions as part of an end-to-end machine translation pipeline. Your completed pipeline will accept English text as input and return the French translation.
 
+# Launch on EC2 GPU Instance with udacity-aind AMI
+* Follow Steps 1 to 10 in instructions_launch_ec2_gpu_instance.pdf
+* Follow Step 11 in instructions_launch_ec2_gpu_instance.pdf to Login with:
+	```
+	ssh aind2@X.X.X.X
+	```
+* Follow Step 12 on EC2 GPU instance. Ensure correct Python kernel version in Jupyter https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
+	```
+	git clone https://github.com/udacity/aind2-nlp-capstone
+	cd aind2-nlp-capstone
+	conda create --name aind-nlp-capstone python=3.5 numpy ipykernel
+	conda install notebook ipykernel
+	ipython kernel install --user
+	source activate aind-nlp-capstone
+	pip install tensorflow-gpu -U
+	pip install keras -U
+	KERAS_BACKEND=tensorflow python -c "from keras import backend"
+	jupyter notebook --ip=0.0.0.0 --no-browser
+	```
+	* Open in browser the URL shown in terminal and replace IP address
+	with that in the AWS EC2 Dashboard http://<EC2_IP_address>:8888/?token=3156e..
+	* Click machine_translation.ipynb
+
 # Setup
 ## Install
 - Python 3
